@@ -26,6 +26,12 @@ import { MatNativeDateModule } from '@angular/material/core';
 import { ModalComponent } from './shared/modal/modal.component';
 import {MatDialogModule} from '@angular/material/dialog';
 import { BotaoControleComponent } from './shared/botao-controle/botao-controle.component';
+import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
+import { PromocoesComponent } from './pages/home/promocoes/promocoes.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import {MatAutocompleteModule} from '@angular/material/autocomplete';
+import { DropdownUfComponent } from './shared/form-busca/dropdown-uf/dropdown-uf.component';
+import { DepoimentosComponent } from './pages/home/depoimentos/depoimentos.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -39,7 +45,10 @@ import { BotaoControleComponent } from './shared/botao-controle/botao-controle.c
     CardDepoimentoComponent,
     FormBuscaComponent,
     ModalComponent,
-    BotaoControleComponent
+    BotaoControleComponent,
+    PromocoesComponent,
+    DropdownUfComponent,
+    DepoimentosComponent
   ],
   imports: [
     BrowserModule,
@@ -54,10 +63,13 @@ import { BotaoControleComponent } from './shared/botao-controle/botao-controle.c
     MatInputModule,
     MatDatepickerModule,
     MatNativeDateModule,
-    MatDialogModule
+    MatDialogModule,
+    ReactiveFormsModule,
+    MatAutocompleteModule
   ],
   providers: [
-    provideAnimationsAsync()
+    provideAnimationsAsync(),
+    provideHttpClient(withInterceptorsFromDi())
   ],
   bootstrap: [AppComponent]
 })

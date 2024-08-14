@@ -1,13 +1,8 @@
-.homepage {
-  width: 100%;
-  .card-wrapper {
+.card-wrapper {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     row-gap: 16px;
     margin-bottom: 40px;
+    gap: 16px;
   }
-  h2 {
-    font-size: 32px;
-  }
-}

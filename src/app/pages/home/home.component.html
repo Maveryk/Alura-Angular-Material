@@ -1,22 +1,19 @@
-<app-banner src="assets/imagens/banner-homepage.png" alt="Banner da aplicação Jornada">
-</app-banner>
+<section class="homepage">
+  <app-banner src="assets/imagens/banner-homepage.png" alt="Banner da aplicação Jornada">
+  </app-banner>
 
-<app-container class="homepage">
-    <h2>Promoções</h2>
+  <app-container>
     <app-form-busca></app-form-busca>
+    <h2>Promoções</h2>
     <div class="card-wrapper">
-      <app-card-busca></app-card-busca>
-      <app-card-busca></app-card-busca>
-      <app-card-busca></app-card-busca>
-      <app-card-busca></app-card-busca>
-      <app-card-busca></app-card-busca>
-      <app-card-busca></app-card-busca>
+      <app-promocoes></app-promocoes>
     </div>
     <h2>Depoimentos</h2>
-    
+
     <div class="card-wrapper">
-      <app-card-depoimento depoimento="Estou muito satisfeito com a Jornada. Foi a melhor viagem da minha vida!" autoria="João Silva"></app-card-depoimento>
-      <app-card-depoimento depoimento="A Jornada me proporcionou uma experiência incrível. Recomendo a todos!" autoria="Maria Souza"></app-card-depoimento>
-      <app-card-depoimento depoimento="A Jornada é a melhor agência de viagens que já conheci. Parabéns!" autoria="José Santos"></app-card-depoimento>
+      <app-depoimentos></app-depoimentos>
     </div>
-</app-container>
+  </app-container>
+
+  <app-banner src="assets/imagens/banner-homepage-rodape.png" alt="Banner da aplicação Jornada"></app-banner>
+</section>
