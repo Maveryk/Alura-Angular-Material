@@ -1,6 +1,4 @@
 import { Component } from '@angular/core';
-import { MatDialog } from '@angular/material/dialog';
-import { ModalComponent } from '../modal/modal.component';
 import { FormBuscaService } from '../../core/services/form-busca.service';
 
 @Component({
@@ -13,6 +11,8 @@ export class FormBuscaComponent {
     public  formBuscaService : FormBuscaService) {}
 
 
-
+    buscar(){
+      console.log(this.formBuscaService.formBusca.value)
+    }
  
 }
